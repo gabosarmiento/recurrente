@@ -125,7 +125,7 @@ module Recurrente
     end # <-- Timeout Block
   end
 
-  # 1.3 Consultar un plan existente 
+  # 1.3 GET - Consultar un plan existente 
   def self.find_plan(plan_code)
     handle_timeouts do
       response = get("/plans" + "/#{plan_code}")
@@ -312,7 +312,7 @@ module Recurrente
   # de dirección.                                                         #
   ######################################################################### 
 
-  # 3.1 POST - Crear una Tarjeta de Credito a un Cliente
+  # 3.1 POST - Crear una Tarjeta de Credito a un Suscriptor
   
   def self.create_card(customer_id, numero , exp_mes, exp_ano ,tipo, nombre, documento, dir_linea1, dir_linea2 , dir_linea3 , departamento, ciudad, pais, codigo_postal, telefono)
     # Recurrente.add_customer_card(cliente, "371449635398431","01", "2018","AMEX","Pablo Picasso","1020304050","Calle Falsa","123","Patio 1","Bogotá","Bogotá D.C.", "CO", "110221", "3103456789")
@@ -850,7 +850,7 @@ module Recurrente
     end
   end
 
-  # 5.5 GET - Buscar un Cargo Extra por Suscripcion
+  # 5.4 GET - Buscar un Cargo Extra por Suscripcion
   def self.find_charge_by_suscription(suscription_id)
     handle_timeouts do
       response = get("/recurringBillItems" + "/?subscriptionId=#{suscription_id}")
