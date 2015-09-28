@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["gabrielsarmiento@gmail.com"]
 
   spec.summary       = %q{Un wrapper para el API de pagos recurrentes de Payulatam}
-  spec.description   = %q{Una Gem de Ruby para consumir la API de payulatam.com api y manejar los pagos recurrentes}
+  spec.description   = %q{Una Gema de Ruby para consumir la API de payulatam.com api y manejar los pagos recurrentes}
   spec.homepage      = "https://github.com/gabosarmiento/recurrente.git"
   spec.license       = "MIT"
 
@@ -23,6 +23,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
 
   # Dependency
-  spec.add_dependency "httparty"
+  spec.add_dependency "httparty", "~> 0.13.7"
   spec.add_dependency "json"
 end
